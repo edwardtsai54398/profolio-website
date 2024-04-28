@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "MonumentExtended Regular";
+  src: url("./font/MonumentExtended/MonumentExtended-Regular.woff")
+    format("woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "MonumentExtended Regular", "Roboto Condensed", "Noto Sans TC",
+    Arial, Helvetica, sans-serif;
+  color: var(--primary);
+}
+*:not(path) {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+p,
+article {
+  font-family: $font-secondary;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: $font-s;
+}
+
+a {
+  color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $font-l;
+  font-weight: bold;
+  line-height: 2;
+  font-family: "MonumentExtended Regular", "Noto Sans TC";
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    rgba(144, 144, 144, 0.4) 0%,
+    rgba(144, 144, 144, 0.1) 10%,
+    rgba(144, 144, 144, 0.1) 50%,
+    rgba(144, 144, 144, 0.3) 80%,
+    rgba(144, 144, 144, 0.4) 90%,
+    rgba(144, 144, 144, 0.6) 100%
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 144, 144, 0.8);
+  width: 8px;
+  border-radius: 8px;
+}
+.dark {
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+      rgba(36, 36, 36, 0.85) 0%,
+      rgba(36, 36, 36, 0.95) 10%,
+      rgba(36, 36, 36, 0.9) 70%,
+      rgba(36, 36, 36, 0.9) 80%,
+      rgba(36, 36, 36, 0.85) 90%,
+      rgba(36, 36, 36, 0.8) 100%
+    );
+  }
+}

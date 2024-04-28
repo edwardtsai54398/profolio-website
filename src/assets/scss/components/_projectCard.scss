@@ -1,0 +1,79 @@
+:root {
+  --card-hover-bg: #fff;
+}
+.dark {
+  --card-hover-bg: #1d1d1d;
+}
+.project_card {
+  flex: 1 1 100%;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-size: $font-s;
+    margin-bottom: 16px;
+  }
+  .project_img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 24px;
+    img {
+      @include img-fit;
+      // object-fit: contain;
+    }
+  }
+  .project_card_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .project_link_group {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+  }
+  .project_link {
+    font-size: $font-s;
+    padding: 6px 16px;
+    border-radius: 8px;
+    background: linear-gradient(100deg, var(--gray-500) 80%, var(--gray-400));
+    color: var(--gray-100);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      display: none;
+    }
+  }
+  .project_study_link {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    transform: translateY(50%);
+    font-size: $font-xs;
+    padding: 6px 12px;
+  }
+  &:hover {
+    background-color: var(--card-hover-bg);
+    transform: scale(1.01);
+    box-shadow: 5px 0px 30px 10px rgba(144, 144, 144, 0.3);
+  }
+}
+@include pad-V {
+  .project_card {
+    padding: 20px 20px 26px 20px;
+    .project_link {
+      font-size: $font-xs;
+      span {
+        display: inline-block;
+        margin-left: 8px;
+      }
+    }
+  }
+}
